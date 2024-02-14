@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💐💐</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+        const date = []
+        function nextpage(curr, next){
+            document.getElementById(curr).style.display = 'none'
+            document.getElementById(next).style.display = 'flex'
+        }
+        function additem(dateitem){
+            date.push(dateitem)
+        }
+        function renderp5(){
+            console.log(date)
+            document.getElementById('date-item1').innerText=date[0]
+            document.getElementById('date-item2').innerText=date[1]
+            document.getElementById('date-item3').innerText=date[2]
+        }
+    </script>
+</head>
+<body>
+    <div id="p1" class="page" style="display: flex;">
+        <img style="width: 300px; height: 300px; border-radius: 10px;" src="https://i.ibb.co/b3S35SM/Screen-Shot-2024-02-13-at-3-55-44-PM.png"/>
+        <h1>
+            Will you be my valentine? 💐💐
+        </h1>
+        <div class="buttons-cont">
+            <button type="button" onclick="nextpage('p1', 'p2')" class="btn1">yes</button>
+            <button type="button" onclick="nextpage('p1', 'p2')" class="btn1">yes</button>
+        </div>
+    </div>
+    <div id="p2" class="page">
+        <h1>
+            What activity will we do?
+        </h1>
+        <div class="choices">
+            <div class="choice-item" onclick="nextpage('p2', 'p3'); additem('Bowling')">
+                <h3>Bowling</h3>
+                <img src="https://www.ncaa.com/_flysystem/public-s3/styles/large_16x9/public-s3/thumbnails/2023-07/bowling-fullreplay.jpg?h=d1cb525d&itok=hbxuhuld" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p2', 'p3'); additem('Arcade')">
+                <h3>Arcade</h3>
+                <img src="https://images.squarespace-cdn.com/content/v1/5a8a22c59f8dce86ccc25373/1664507643739-KDQXDM3VVU7LTWCQRKW5/AM+LKM+Opening-29.jpg" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p2', 'p3'); additem('Movie')">
+                <h3>Movie</h3>
+                <img src="https://images.axios.com/KVSGpNMi3Ds9wD-S_hFVuq0-oH0=/0x596:5792x3854/1920x1080/2023/03/07/1678205109431.jpg" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p2', 'p3'); additem('Board Games')">
+                <h3>Board Game Cafe</h3>
+                <img src="https://images.adsttc.com/media/images/5252/0ae2/e8e4/4e67/bf00/0574/large_jpg/Photo1_Triopton_Architects.jpg?1381108442" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p2', 'p3'); additem('Legos')">
+                <h3>Build Legos</h3>
+                <img src="https://i.ebayimg.com/images/g/XXoAAOSw-S5hzSdw/s-l1200.webp" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+    <div id="p3" class="page">
+        <h1>
+            Where will we eat?
+        </h1>
+        <div class="choices">
+            <div class="choice-item" onclick="nextpage('p3', 'p4'); additem('Hotpot')">
+                <h3>Hotpot</h3>
+                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/03/18/0/FNK_HOT_POT_AT_HOME_OPENER_H_f_s4x3.jpg.rend.hgtvcom.1280.960.suffix/1616107469470.jpeg" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p3', 'p4'); additem('Kbbq')">
+                <h3>Kbbq</h3>
+                <img src="https://i0.wp.com/annledo.com/wp-content/uploads/2019/11/Korean-BBQ-at-Home-6-scaled.jpg?fit=1440%2C1047&ssl=1" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p3', 'p4'); additem('Seafood Boil')">
+                <h3>Seafood Boil</h3>
+                <img src="https://www.allrecipes.com/thmb/XDFvpo7BXQ7_s920fAp28qox0PY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/279460-Old-Bay-Seafood-Boil-ddmfs-139-4x3-aa189a5c09104659957fe6fcb715c4bd.jpg" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p3', 'p4'); additem('Sushi')">
+                <h3>Sushi</h3>
+                <img src="https://ik.imagekit.io/awwybhhmo/satellite_images/japanese/beyondmenu/hero/16.jpg?tr=w-3840,q-50" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p3', 'p4'); additem('Surprise Meal')">
+                <h3>Cook for u (surprise)</h3>
+                <img src="https://static.wixstatic.com/media/294c79_46abd7c477f7446c831e60520c1787fc~mv2.png/v1/fill/w_640,h_328,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/294c79_46abd7c477f7446c831e60520c1787fc~mv2.png" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>    
+        </div>
+    </div>
+    <div id="p4" class="page">
+        <h1>
+            Dessert?
+        </h1>
+        <div class="choices">
+            <div class="choice-item" onclick="nextpage('p4', 'p5'); additem('Boba'); renderp5()">
+                <h3>Boba</h3>
+                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/6/13/boba-milk-tea.jpg.rend.hgtvcom.1280.1280.suffix/1686684207354.jpeg" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p4', 'p5'); additem('Salt n Straw'); renderp5()">
+                <h3>Salt n Straw</h3>
+                <img src="https://pbs.twimg.com/media/EAH8v5KUcAAOxyW.jpg" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="choice-item" onclick="nextpage('p4', 'p5'); additem('Meetfresh'); renderp5()">
+                <h3>MeetFresh</h3>
+                <img src="https://tb-static.uber.com/prod/image-proc/processed_images/331a6adfd4238114dae371554c02e2b6/c73ecc27d2a9eaa735b1ee95304ba588.jpeg" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+        </div>
+    </div> 
+    <div id="p5" class="page">
+        <div id="date-page">
+            <img src="https://i.ibb.co/CnWH5Zn/dates.png">
+            <h1>Our Valentine's Date 🫶</h1>
+            <div id="date-container">
+                <h3 id="date-item1">item 1</h3>
+                <h3 id="date-item2">item 2</h3>
+                <h3 id="date-item3">item 3</h3>
+            </div>
+            <div>
+                <p style="padding-top: 80px;">I love you 😘</p>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
